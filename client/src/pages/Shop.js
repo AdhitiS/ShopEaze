@@ -75,6 +75,9 @@ const Shop = () => {
   useEffect(() => {
     const delayed = setTimeout(() => {
       fetchProducts({ query: text });
+      if (!text) {
+        loadAllProducts();
+      }
     }, 300);
     return () => clearTimeout(delayed);
   }, [text]);
@@ -398,7 +401,7 @@ const Shop = () => {
                 </span>
               }
             >
-              <div style={{ maringTop: "-10px" }} className=" pr-4">
+              <div style={{ maringTop: "-10px" }} className="pr-5">
                 {showColors()}
               </div>
             </SubMenu>
@@ -412,7 +415,7 @@ const Shop = () => {
                 </span>
               }
             >
-              <div style={{ maringTop: "-10px" }} className="pr-4">
+              <div style={{ maringTop: "-10px" }} className="pr-5">
                 {showShipping()}
               </div>
             </SubMenu>
@@ -442,4 +445,3 @@ const Shop = () => {
 };
 
 export default Shop;
-
