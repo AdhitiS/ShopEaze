@@ -47,7 +47,7 @@ const Checkout = ({ history }) => {
       setTotal(0);
       setTotalAfterDiscount(0);
       setCoupon("");
-      toast.success("Cart is emapty. Contniue shopping.");
+      toast.success("Cart is empty. Continue shopping.");
     });
   };
 
@@ -98,7 +98,7 @@ const Checkout = ({ history }) => {
     products.map((p, i) => (
       <div key={i}>
         <p>
-          {p.product.title} ({p.color}) x {p.count} ={" "}
+          {p.product.title} ({p.color}) x {p.count} ={" ₹"}
           {p.product.price * p.count}
         </p>
       </div>
@@ -147,7 +147,7 @@ const Checkout = ({ history }) => {
 
         {totalAfterDiscount > 0 && (
           <p className="bg-success p-2">
-            Discount Applied: Total Payable: ${totalAfterDiscount}
+            Discount Applied: Total Payable: ₹{totalAfterDiscount}
           </p>
         )}
 
