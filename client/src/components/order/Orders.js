@@ -22,7 +22,7 @@ const Orders = ({ orders, handleStatusChange }) => {
             <td>
               <b>{p.product.title}</b>
             </td>
-            <td>{p.product.price}</td>
+            <td> ₹{p.product.price}</td>
             <td>{p.product.brand}</td>
             <td>{p.color}</td>
             <td>{p.count}</td>
@@ -58,6 +58,7 @@ const Orders = ({ orders, handleStatusChange }) => {
                   name="status"
                 >
                   <option value="Not Processed">Not Processed</option>
+                  <option value="Cash On Delivery">Cash On Delivery</option>
                   <option value="Processing">Processing</option>
                   <option value="Dispatched">Dispatched</option>
                   <option value="Cancelled">Cancelled</option>
